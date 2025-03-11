@@ -48,3 +48,21 @@ Content-Type: application/json
 
 GET http://localhost:5500/api/v1/subscriptions/user/67d00577d0b17bfb9a4a0268
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QwMDU3N2QwYjE3YmZiOWE0YTAyNjgiLCJpYXQiOjE3NDE2OTAzMjksImV4cCI6MTc0MTc3NjcyOX0._Z1DKUaIJlePvx1lX9bnC71OIeBu0jK0myr4I-ZN2AE
+
+
+### Update a subscription PUT /api/v1/subscriptions/:id
+
+PUT http://localhost:5500/api/v1/subscriptions/67d016b3ac54c27217474d20
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QwMDU3N2QwYjE3YmZiOWE0YTAyNjgiLCJpYXQiOjE3NDE2OTAzMjksImV4cCI6MTc0MTc3NjcyOX0._Z1DKUaIJlePvx1lX9bnC71OIeBu0jK0myr4I-ZN2AE
+Content-Type: application/json
+
+{
+    "name": "Spotify Premium",
+    "price": 119.00,
+    "currency": "INR",
+    "frequency": "monthly",
+    "category": "entertainment",
+    "paymentMethod": "Credit Card",
+    "status": "expired",
+    "startDate": "2024-12-28"
+}
