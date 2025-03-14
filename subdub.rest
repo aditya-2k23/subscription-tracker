@@ -26,7 +26,7 @@ GET http://localhost:5500/api/v1/users/
 ### Get a single user by id GET /api/v1/users/:id
 
 GET http://localhost:5500/api/v1/users/67d00577d0b17bfb9a4a0268
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QwMDU3N2QwYjE3YmZiOWE0YTAyNjgiLCJpYXQiOjE3NDE2OTAzMjksImV4cCI6MTc0MTc3NjcyOX0._Z1DKUaIJlePvx1lX9bnC71OIeBu0jK0myr4I-ZN2AE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QwMDU3N2QwYjE3YmZiOWE0YTAyNjgiLCJpYXQiOjE3NDE5NDIyMTcsImV4cCI6MTc0MjAyODYxN30.EvPMfeZ8xGlVsTyp2osTy24CY66WJGu861ueugbUGU4
 
 ### Create a subscription POST /api/v1/subscriptions
 
@@ -48,7 +48,7 @@ Content-Type: application/json
 ### Get all subscriptions GET /api/v1/subscriptions
 
 GET http://localhost:5500/api/v1/subscriptions/user/67d00577d0b17bfb9a4a0268
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QwMDU3N2QwYjE3YmZiOWE0YTAyNjgiLCJpYXQiOjE3NDE2OTAzMjksImV4cCI6MTc0MTc3NjcyOX0._Z1DKUaIJlePvx1lX9bnC71OIeBu0jK0myr4I-ZN2AE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QwMDU3N2QwYjE3YmZiOWE0YTAyNjgiLCJpYXQiOjE3NDE5NDIyMTcsImV4cCI6MTc0MjAyODYxN30.EvPMfeZ8xGlVsTyp2osTy24CY66WJGu861ueugbUGU4
 
 
 ### Update a subscription PUT /api/v1/subscriptions/:id
@@ -70,8 +70,8 @@ Content-Type: application/json
 
 ### Delete a subscription DELETE /api/v1/subscriptions/:id
 
-DELETE http://localhost:5500/api/v1/subscriptions/67d016b3ac54c27217474d20
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QwMDU3N2QwYjE3YmZiOWE0YTAyNjgiLCJpYXQiOjE3NDE2OTAzMjksImV4cCI6MTc0MTc3NjcyOX0._Z1DKUaIJlePvx1lX9bnC71OIeBu0jK0myr4I-ZN2AE
+DELETE http://localhost:5500/api/v1/subscriptions/67d3ee12e1452b7d12b78e13
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QwMDU3N2QwYjE3YmZiOWE0YTAyNjgiLCJpYXQiOjE3NDE5NDIyMTcsImV4cCI6MTc0MjAyODYxN30.EvPMfeZ8xGlVsTyp2osTy24CY66WJGu861ueugbUGU4
 
 ### Create a subscription POST /api/v1/subscriptions
 
@@ -87,4 +87,20 @@ Content-Type: application/json
     "category": "entertainment",
     "paymentMethod": "Credit Card",
     "startDate": "2025-02-15"
+}
+
+### Create an Amazon Prime Subscription
+
+POST http://localhost:5500/api/v1/subscriptions
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2QwMDU3N2QwYjE3YmZiOWE0YTAyNjgiLCJpYXQiOjE3NDE5NDIyMTcsImV4cCI6MTc0MjAyODYxN30.EvPMfeZ8xGlVsTyp2osTy24CY66WJGu861ueugbUGU4
+Content-Type: application/json
+
+{
+    "name": "Test",
+    "price": 139.00,
+    "currency": "USD",
+    "frequency": "monthly",
+    "category": "entertainment",
+    "paymentMethod": "Credit Card",
+    "startDate": "2025-02-10"
 }
